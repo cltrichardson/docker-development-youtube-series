@@ -85,15 +85,11 @@ Documentation on all the Kubernetes fields for terraform [here](https://www.terr
 ```
 terraform init
 
-terraform plan -var serviceprinciple_id=$SERVICE_PRINCIPAL \
-    -var serviceprinciple_key="$SERVICE_PRINCIPAL_SECRET" \
-    -var tenant_id=$TENTANT_ID \
-    -var subscription_id=$SUBSCRIPTION \
-    -var ssh_key="$SSH_KEY"
+
 
 terraform apply -var serviceprinciple_id=$SERVICE_PRINCIPAL \
     -var serviceprinciple_key="$SERVICE_PRINCIPAL_SECRET" \
-    -var tenant_id=$TENTANT_ID \
+    -var tenant_id=$TENANT_ID \
     -var subscription_id=$SUBSCRIPTION \
     -var ssh_key="$SSH_KEY"
 ```
@@ -119,7 +115,7 @@ kubectl get svc
 ```
 terraform destroy -var serviceprinciple_id=$SERVICE_PRINCIPAL \
     -var serviceprinciple_key="$SERVICE_PRINCIPAL_SECRET" \
-    -var tenant_id=$TENTANT_ID \
+    -var tenant_id=$TENANT_ID \
     -var subscription_id=$SUBSCRIPTION \
     -var ssh_key="$SSH_KEY"
 ```

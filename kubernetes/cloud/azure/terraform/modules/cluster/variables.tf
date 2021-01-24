@@ -5,11 +5,11 @@ variable "serviceprinciple_key" {
 }
 
 variable "location" {
-  default = "australiaeast"
+  default = "eastus"
 }
 
 variable "kubernetes_version" {
-    default = "1.16.10"
+    default = "1.19.6"
 }
 
 variable "ssh_key" {
